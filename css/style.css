@@ -22,3 +22,69 @@ img {
   display: block;
   margin: auto;
 }
+
+p {
+  color: green;
+}
+
+.subheader {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px;
+}
+
+#main_page_header { 
+  background-color: mistyrose;
+  text-align: center;
+}
+
+#Sedans { 
+  width: 50%;
+  background-color: lightblue;
+  border: 1px solid black; 
+  padding: 10px; 
+}
+
+#Suv { 
+  width: 50%; 
+  background-color: lightyellow; 
+  border: 1px solid black; 
+  padding: 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.box {
+  background-color: lightgray;
+  padding: 20px;
+  margin: 10px;
+}
+
+#footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+#main_page_header {
+  display: flex;
+  gap: 20px;
+}
+
+#Sedans, #Suv {
+  flex: 1;
+}
