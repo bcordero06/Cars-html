@@ -85,6 +85,6 @@ p {
   gap: 20px;
 }
 
-#Sedans, #Suv {
+#Sedans, #Suv,#SedansInChicago,#SuvsInChicago {
   flex: 1;
 }
