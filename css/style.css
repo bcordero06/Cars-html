@@ -1,6 +1,11 @@
-header {
-  background-color: mistyrose;
+header, #main_page_header {
+  background-color: rgb(119, 228, 79);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
 }
 
 h3 {
@@ -9,7 +14,9 @@ h3 {
 }
 
 body {
-  background-color: #f2f4f7;
+  background-color: #88a9da;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 * {
@@ -18,6 +25,8 @@ body {
 
 img {
   width: 50%;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
   display: block;
   margin: auto;
@@ -30,43 +39,65 @@ img {
 }
 
 .button {
-  background-color: #04AA6D;
+  background-color: #d3d4f1;
   color: white;
-  padding: 15px;
+  padding: 12px 16px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
   margin: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-#main_page_header { 
-  background-color: mistyrose;
-  text-align: center;
-}
 
 #Sedans { 
-  width: 50%;
+  flex: 1 1 320px;
+  background-color: lightblue;
+  border: 1px solid black; 
+  padding: 10px; 
+  box-sizing: border-box;
+}
+
+#Suv  { 
+  flex: 1 1 320px; 
+  background-color: lightyellow; 
+  border: 1px solid black; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#Sedans_chicago { 
+  flex: 1 1 320px;
   background-color: lightblue;
   border: 1px solid black; 
   padding: 10px; 
 }
 
-#Suv { 
-  width: 50%; 
-  background-color: lightyellow; 
+#Suv_chicago { 
+  flex: 1 1 320px; 
+  background-color: rgb(162, 188, 161); 
   border: 1px solid black; 
   padding: 10px;
 }
 
+
 .flex-container {
   display: flex;
+  gap: 20px;
+  justify-content: center; /* center the row */
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap; /* wrap on small screens */
 }
 
 .box {
   background-color: lightgray;
   padding: 20px;
   margin: 10px;
+  box-sizing: border-box;
 }
 
 #footer ul {
@@ -77,11 +108,20 @@ img {
   margin: 0;
 }
 
-#main_page_header {
-  display: flex;
-  gap: 20px;
+
+#Sedans, #Suv, #Sedans_chicago, #Suv_chicago, #SedansInChicago, #Suv_Chicago {
+  min-width: 280px;
 }
 
-#Sedans, #Suv,#SedansInChicago,#SuvsInChicago {
-  flex: 1;
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  img{
+    width: 100%;
+  }
+  .flex-container{
+    flex-direction: column;
+    align-items: center;
+  }
 }
